@@ -40,8 +40,8 @@ CREATE TABLE Exams (
     OU_NearVisualAcuity VARCHAR(20),
     FarCoverTest VARCHAR(20),
     NearCoverTest VARCHAR(20),
-    Worth VARCHAR(20),
-    Wilms DECIMAL(2, 2),
+    Worth INT,
+    Wilms DECIMAL(4, 2),
     PrescriptionID INT,
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
     FOREIGN KEY (PrescriptionID) REFERENCES Prescriptions(PrescriptionID)
@@ -121,6 +121,9 @@ CREATE TABLE Lenses (
     FOREIGN KEY (CoatinglID) REFERENCES LensCoatings(CoatingID),
     FOREIGN KEY (ConstructionID) REFERENCES LensConstructions(ConstructionID),
 );
+
+
+
     
 CREATE TABLE PaymentForms (
     PaymentFormID INT PRIMARY KEY,
